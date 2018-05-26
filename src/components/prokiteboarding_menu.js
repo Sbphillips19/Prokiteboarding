@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Segment } from 'semantic-ui-react';
+import { Menu, Segment, Icon } from 'semantic-ui-react';
 import MediaQuery from 'react-responsive';
 
 export default class ProkiteboardingMenu extends Component {
@@ -43,11 +43,29 @@ export default class ProkiteboardingMenu extends Component {
             active={activeItem === 'Contact us'}
             onClick={this.handleItemClick}
           />
-          <Menu.Item
-            name="Facebook"
-            active={activeItem === 'Facebook'}
-            onClick={this.handleItemClick}
-          />
+
+          <Menu.Menu position="right">
+            <Menu.Item
+              name="facebook"
+              active={activeItem === 'facebook'}
+              onClick={this.handleItemClick}
+              href="https://www.facebook.com/prokiteboarding/"
+              target="_blank"
+            >
+              <Icon name="facebook" />
+              Facebook
+            </Menu.Item>
+            <Menu.Item
+              name="instagram"
+              active={activeItem === 'instagram'}
+              onClick={this.handleItemClick}
+              href="https://www.instagram.com/obxkiteboardlessons/"
+              target="_blank"
+            >
+              <Icon name="instagram" />
+              Instagram
+            </Menu.Item>
+          </Menu.Menu>
         </Menu>
       </Segment>
     );

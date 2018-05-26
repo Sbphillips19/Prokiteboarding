@@ -12,6 +12,11 @@ class Footer extends React.Component {
           <div className="footer__navigation">
             <ul className="footer__list">
               <li className="footer__item">
+                <a href="#" className="footer__link">
+                  <ContactModal />
+                </a>
+              </li>
+              <li className="footer__item">
                 <a
                   href="https://www.facebook.com/prokiteboarding/"
                   target="_blank"
@@ -21,18 +26,12 @@ class Footer extends React.Component {
                 </a>
               </li>
               <li className="footer__item">
-                <a href="#" className="footer__link">
-                  <ContactModal />
-                </a>
-              </li>
-              <li className="footer__item">
-                <a href="#" class="footer__link">
-                  Privacy policy
-                </a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">
-                  Terms
+                <a
+                  href="https://www.instagram.com/obxkiteboardlessons/"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <ion-icon name="logo-instagram" />
                 </a>
               </li>
             </ul>

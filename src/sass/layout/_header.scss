@@ -1,35 +1,48 @@
-.header {
-  height: 60vh;
+.header-main {
+  height: 85vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-green, 0.4),
+      rgba($color-primary-blue, 0.4)
+    ),
+    url(../images/obxdownwind.jpg);
+  background-size: cover;
+  background-position: top;
   position: relative;
+
+  @supports (clib-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    /* top left, top right, bottom right, bottom left */
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+    height: 95vh;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-green, 0.5),
+        rgba($color-primary-blue, 0.5)
+      ),
+      url(../images/obxdownwind.jpg);
+  }
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0% 100%);
+  }
 
   &__logo-box {
   }
 
   &__logo {
-    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.1);
-    border-radius: 1px;
-    padding: 3rem;
+    border-radius: 3px;
+    padding: 6rem;
     font-size: $default-font-size;
     position: relative;
     left: 50%;
     transform: skewX(-2deg) translate(-50%);
     width: 75%;
-  }
-
-  &__bg-video {
-    position: absolute;
-    top: -1rem;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.75;
-    overflow: hidden;
-
-    &__content {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
   }
 }
