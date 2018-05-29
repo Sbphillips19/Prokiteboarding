@@ -499,6 +499,47 @@ body {
   line-height: 1.7;
   color: #777; }
 
+.heading-secondary {
+  color: #66ccff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 6rem; }
+
+.heading-tertiary {
+  color: #21ba45;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.grid-about {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important; }
+
+.about-list {
+  margin-left: 5rem !important; }
+  .about-list--item {
+    margin-top: 2rem; }
+  .about-list--item:first-child {
+    margin-top: 1.5rem; }
+
 #contact-modal .contact-modal--header {
   font-size: 5rem; }
 
@@ -507,6 +548,13 @@ body {
 
 #contact-modal .contact-modal__content__description--paragraph {
   font-size: 2rem; }
+
+.repairs-item-group {
+  margin-left: 10rem !important;
+  margin-right: 10rem !important; }
+
+.repair-image {
+  height: 30rem; }
 
 .footer {
   background-color: #333;
@@ -561,7 +609,7 @@ body {
       height: 95vh; } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header-main {
-      background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4)), url(../images/obxdownwind.jpg); } }
+      background-image: linear-gradient(to right, rgba(102, 255, 153, 0.5), rgba(102, 204, 255, 0.5)), url(../images/obxdownwind.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .header-main {
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0% 100%);
@@ -582,6 +630,30 @@ body {
   margin-bottom: 0 !important; }
 
 .section-about {
-  padding: 20rem 0;
+  padding: 5rem 0;
   background-color: #fff;
   background-size: cover; }
+
+.section-lessons {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-bottom: 10rem;
+  transform: skewY(-7deg); }
+  .section-lessons > * {
+    transform: skewY(7deg); }
+
+.section-repairs {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-bottom: 10rem;
+  transform: skewY(-7deg); }
+  .section-repairs > * {
+    transform: skewY(7deg); }

@@ -29,7 +29,7 @@ class Footer extends React.Component {
                 <a
                   href="https://www.instagram.com/obxkiteboardlessons/"
                   target="_blank"
-                  class="footer__link"
+                  className="footer__link"
                 >
                   <ion-icon name="logo-instagram" />
                 </a>
@@ -38,9 +38,9 @@ class Footer extends React.Component {
           </div>
         </div>
         <div className="row">
-          <p class="footer__copyright">
+          <p className="footer__copyright">
             Built by{' '}
-            <a href="#" class="footer__link">
+            <a href="#" className="footer__link">
               Stephen Phillips
             </a>
           </p>

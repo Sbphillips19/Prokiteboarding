@@ -6,3 +6,17 @@ body {
   line-height: 1.7;
   color: $color-grey-dark;
 }
+
+.heading-secondary {
+  color: $color-primary-blue;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 6rem;
+}
+
+.heading-tertiary {
+  color: $color-secondary-green;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 3rem;
+}

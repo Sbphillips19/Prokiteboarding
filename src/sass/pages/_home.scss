@@ -1,5 +1,45 @@
 .section-about {
-  padding: 20rem 0;
+  padding: 5rem 0;
   background-color: $color-white;
   background-size: cover;
+}
+
+.section-lessons {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-green, 0.4),
+    rgba($color-primary-blue, 0.4)
+  );
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  margin-bottom: 10rem;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-repairs {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-green, 0.4),
+    rgba($color-primary-blue, 0.4)
+  );
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  margin-bottom: 10rem;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
 }
