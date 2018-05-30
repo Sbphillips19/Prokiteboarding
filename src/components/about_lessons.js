@@ -3,7 +3,7 @@ import { Button, Grid, Segment, Image, List } from 'semantic-ui-react';
 import LearnToRide from '../images/learntoride.jpg';
 
 const AboutLessons = () => (
-  <section className="section-about-lessons">
+  <section className="section-about-lessons" id="about-lessons">
     <div className="u-center-text u-margin-bottom-big">
       <h2 className="heading-secondary">Kiteboard Lessons</h2>
       <h3 className="heading-tertiary">
@@ -27,9 +27,14 @@ const AboutLessons = () => (
             Walkie talkie helmets provide safest experience
           </List.Item>
         </List>
-        <a href="#" className="btn-text">
-          Learn more &rarr;
-        </a>
+        <Button
+          labelPosition="right"
+          icon="right chevron"
+          content="Learn More"
+          size="big"
+          className="learn-more-button"
+          href="#lessons"
+        />
       </Grid.Column>
       <Grid.Column>
         <Image size="large" rounded centered src={LearnToRide} />

@@ -88,11 +88,17 @@ body {
   padding-right: 5rem !important; }
 
 .about-list {
-  margin-left: 5rem !important; }
+  margin-left: 5rem !important;
+  margin-top: 1rem !important; }
   .about-list--item {
     margin-top: 2rem; }
   .about-list--item:first-child {
     margin-top: 1.5rem; }
+
+.learn-more-button {
+  margin-left: 5rem !important;
+  margin-top: 2rem !important;
+  padding: 2rem !important; }
 
 #contact-modal .contact-modal--header {
   font-size: 5rem; }
@@ -102,6 +108,20 @@ body {
 
 #contact-modal .contact-modal__content__description--paragraph {
   font-size: 2rem; }
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 16px;
+  transform: scale(0.8);
+  transition: 0.5s; }
+  input[type='Radio']:checked ~ .reveal-if-active {
+    opacity: 1;
+    max-height: 100px;
+    padding: 10px 20px;
+    transform: scale(1);
+    overflow: visible; }
 
 .repairs-item-group {
   margin-left: 10rem !important;
@@ -177,13 +197,17 @@ body {
     transform: skewX(-2deg) translate(-50%);
     width: 75%; }
 
-.main-menu {
-  position: fixed;
+#nav {
   top: 0;
   left: 0;
   margin-bottom: 0 !important; }
 
 .section-about {
+  padding: 5rem 0;
+  background-color: #fff;
+  background-size: cover; }
+
+.section-book {
   padding: 5rem 0;
   background-color: #fff;
   background-size: cover; }

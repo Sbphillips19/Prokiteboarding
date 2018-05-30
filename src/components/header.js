@@ -6,7 +6,7 @@ import HeavenWEBM from '../images/Heaven/Heaven.webm';
 class Header extends React.Component {
   render() {
     return (
-      <header className="header-main">
+      <header className="header-main" id="header">
         <div className="header-main__logo-box">
           <img
             src="img/GuaranteedToRide.png"

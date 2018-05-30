@@ -5,7 +5,7 @@ import card2 from '../images/learntoride.jpg';
 import card3 from '../images/kitesurf.jpg';
 
 const Lessons = () => (
-  <section className="section-lessons">
+  <section className="section-lessons" id="lessons">
     <div className="u-center-text u-margin-bottom-big">
       <h2 className="heading-secondary">Kiteboard Lessons</h2>
     </div>

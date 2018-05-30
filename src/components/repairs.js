@@ -12,7 +12,7 @@ import Trailer from '../images/trailer.jpg';
 import SewingSoundView from '../images/sewingsoundview.png';
 
 const Repairs = () => (
-  <section className="section-repairs">
+  <section className="section-repairs" id="repairs">
     <div className="u-center-text u-margin-bottom-big">
       <h2 className="heading-secondary">Kiteboard Repairs</h2>
     </div>
@@ -63,7 +63,7 @@ const Repairs = () => (
             Warehouse is stocked
           </Item.Meta>
           <Item.Description className="repairs-item-group__item__description">
-            We have parts for all kite brands, from values to hoses. If
+            We have parts for all kite brands, from valves to hoses. If
             something else is needed, we can order you parts or use pieces
             brought to us. Our kite repair sewing machine provides the highest
             quality stitching that is guaranteed to last.

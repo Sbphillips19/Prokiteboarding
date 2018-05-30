@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Segment, Icon } from 'semantic-ui-react';
+import { Menu, Segment, Icon, Sticky } from 'semantic-ui-react';
 import MediaQuery from 'react-responsive';
 
 export default class ProkiteboardingMenu extends Component {
@@ -11,22 +11,25 @@ export default class ProkiteboardingMenu extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Segment inverted className="main-menu">
-        <Menu inverted pointing secondary stackable>
+      <Segment inverted className="main-menu" id="nav">
+        <Menu top inverted pointing secondary stackable>
           <Menu.Item
             name="Home"
             active={activeItem === 'Home'}
             onClick={this.handleItemClick}
+            href="#header"
           />
           <Menu.Item
             name="Lessons & Prices"
             active={activeItem === 'Lessons & Prices'}
             onClick={this.handleItemClick}
+            href="#about-lessons"
           />
           <Menu.Item
             name="Kite Repairs"
             active={activeItem === 'Kite Repairs'}
             onClick={this.handleItemClick}
+            href="#about-repairs"
           />
           <Menu.Item
             name="Shop"

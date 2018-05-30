@@ -3,7 +3,7 @@ import { Button, Grid, Segment, Image, List } from 'semantic-ui-react';
 import KiteRepair from '../images/kiterepair.jpg';
 
 const AboutLessons = () => (
-  <section className="section-about-lessons">
+  <section className="section-about-lessons" id="about-repairs">
     <div className="u-center-text u-margin-bottom-big">
       <h2 className="heading-secondary">Pro Kiteboard Repairs</h2>
       <h3 className="heading-tertiary">Guaranteed To Last</h3>
@@ -25,9 +25,14 @@ const AboutLessons = () => (
             Treat everykite as if it is our own
           </List.Item>
         </List>
-        <a href="#" className="btn-text">
-          Learn more &rarr;
-        </a>
+        <Button
+          labelPosition="right"
+          icon="right chevron"
+          content="Learn More"
+          size="big"
+          className="learn-more-button"
+          href="#repairs"
+        />
       </Grid.Column>
       <Grid.Column>
         <Image size="large" rounded centered src={KiteRepair} />

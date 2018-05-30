@@ -4,6 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Repairs from './components/repairs';
 import Lessons from './components/lessons';
+import Book from './components/book';
 import AboutLessons from './components/about_lessons';
 import AboutRepairs from './components/about_repairs';
 import MediaQuery from 'react-responsive';
@@ -21,6 +22,7 @@ class App extends Component {
           <Lessons />
           <AboutRepairs />
           <Repairs />
+          <Book />
         </main>
         <Footer />
       </div>
