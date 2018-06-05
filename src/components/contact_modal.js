@@ -31,10 +31,16 @@ const ContactModal = () => (
         </p>
         <p />
         <p className="contact-modal__content__description--paragraph">
-          USA +1 716-254-7130
+          USA/ WHATSAPP +1 716-254-7130
         </p>
         <p className="contact-modal__content__description--paragraph">
-          WHATSAPP +1 716-254-7130
+          <a
+            id="prokiteboarding-phone-number"
+            className="btn btn--white"
+            href="tel:1-716-254-7130"
+          >
+            Call Us Now!
+          </a>
         </p>
       </Modal.Description>
     </Modal.Content>

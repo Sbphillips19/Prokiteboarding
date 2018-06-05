@@ -36,6 +36,10 @@
     & > * {
       transform: skewY(0);
     }
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
   }
 }
 
@@ -68,9 +72,10 @@
     }
   }
 
-  @include respond(tab-phone) {
+  @include respond(phone) {
     margin-bottom: 4rem;
     margin-top: 5rem;
+    padding-bottom: 10rem;
   }
 }
 

@@ -3,7 +3,7 @@ import { Button, Grid, Segment, Image, List } from 'semantic-ui-react';
 import KiteRepair from '../images/kiterepair.jpg';
 
 const AboutLessons = () => (
-  <section className="section-about-lessons" id="about-repairs">
+  <section className="section-about-repairs" id="about-repairs">
     <div className="u-center-text u-margin-bottom-big">
       <h2 className="heading-secondary">Pro Kiteboard Repairs</h2>
       <h3 className="heading-tertiary">Guaranteed To Last</h3>
