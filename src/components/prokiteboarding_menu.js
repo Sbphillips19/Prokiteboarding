@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { Menu, Segment, Icon, Sticky } from 'semantic-ui-react';
+import {
+  Menu,
+  Segment,
+  Icon,
+  Sticky,
+  Responsive,
+  Dropdown
+} from 'semantic-ui-react';
 import MediaQuery from 'react-responsive';
+import ResponsiveMenu from 'react-responsive-navbar';
 
 export default class ProkiteboardingMenu extends Component {
   state = { activeItem: 'home' };
@@ -11,66 +19,99 @@ export default class ProkiteboardingMenu extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Segment inverted className="main-menu" id="nav">
-        <Menu top inverted pointing secondary stackable>
-          <Menu.Item
-            name="Home"
-            active={activeItem === 'Home'}
-            onClick={this.handleItemClick}
-            href="#header"
-          />
-          <Menu.Item
-            name="Lessons & Prices"
-            active={activeItem === 'Lessons & Prices'}
-            onClick={this.handleItemClick}
-            href="#about-lessons"
-          />
-          <Menu.Item
-            name="Kite Repairs"
-            active={activeItem === 'Kite Repairs'}
-            onClick={this.handleItemClick}
-            href="#about-repairs"
-          />
-          <Menu.Item
-            name="Shop"
-            active={activeItem === 'Shop'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Location"
-            active={activeItem === 'Location'}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Contact us"
-            active={activeItem === 'Contact us'}
-            onClick={this.handleItemClick}
-          />
+      <div>
+        <Responsive minWidth={800}>
+          <Segment inverted className="main-menu" id="nav">
+            <Menu top inverted pointing secondary>
+              <Menu.Item
+                name="Home"
+                active={activeItem === 'Home'}
+                onClick={this.handleItemClick}
+                href="#header"
+              />
+              <Menu.Item
+                name="Lessons & Prices"
+                active={activeItem === 'Lessons & Prices'}
+                onClick={this.handleItemClick}
+                href="#about-lessons"
+              />
+              <Menu.Item
+                name="Kite Repairs"
+                active={activeItem === 'Kite Repairs'}
+                onClick={this.handleItemClick}
+                href="#about-repairs"
+              />
+              <Menu.Item
+                name="Contact us"
+                active={activeItem === 'Contact us'}
+                onClick={this.handleItemClick}
+                href="#book"
+              />
+              <Menu.Menu position="right">
+                <Menu.Item
+                  name="facebook"
+                  active={activeItem === 'facebook'}
+                  onClick={this.handleItemClick}
+                  href="https://www.facebook.com/prokiteboarding/"
+                  target="_blank"
+                >
+                  <Icon name="facebook" />
+                  Facebook
+                </Menu.Item>
+                <Menu.Item
+                  name="instagram"
+                  active={activeItem === 'instagram'}
+                  onClick={this.handleItemClick}
+                  href="https://www.instagram.com/obxkiteboardlessons/"
+                  target="_blank"
+                >
+                  <Icon name="instagram" />
+                  Instagram
+                </Menu.Item>
+              </Menu.Menu>
+            </Menu>
+          </Segment>
+        </Responsive>
 
-          <Menu.Menu position="right">
-            <Menu.Item
-              name="facebook"
-              active={activeItem === 'facebook'}
-              onClick={this.handleItemClick}
-              href="https://www.facebook.com/prokiteboarding/"
-              target="_blank"
-            >
-              <Icon name="facebook" />
-              Facebook
-            </Menu.Item>
-            <Menu.Item
-              name="instagram"
-              active={activeItem === 'instagram'}
-              onClick={this.handleItemClick}
-              href="https://www.instagram.com/obxkiteboardlessons/"
-              target="_blank"
-            >
-              <Icon name="instagram" />
-              Instagram
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu>
-      </Segment>
+        <Responsive maxWidth={800}>
+          <Segment className="main-menu" id="nav">
+            <Menu attached="top">
+              <Dropdown item icon="sidebar" simple>
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <Menu.Item name="Lessons & Prices" href="#about-lessons" />
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Menu.Item name="Kite Repairs" href="#about-repairs" />
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Menu.Item name="Contact us" href="#book" />
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <Menu.Menu position="right">
+                <Menu.Item
+                  name="facebook"
+                  href="https://www.facebook.com/prokiteboarding/"
+                  target="_blank"
+                >
+                  <Icon name="facebook" />
+                  Facebook
+                </Menu.Item>
+                <Menu.Item
+                  name="instagram"
+                  href="https://www.instagram.com/obxkiteboardlessons/"
+                  target="_blank"
+                >
+                  <Icon name="instagram" />
+                  Instagram
+                </Menu.Item>
+              </Menu.Menu>
+            </Menu>
+          </Segment>
+        </Responsive>
+      </div>
     );
   }
 }

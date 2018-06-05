@@ -8,6 +8,7 @@ import Book from './components/book';
 import AboutLessons from './components/about_lessons';
 import AboutRepairs from './components/about_repairs';
 import MediaQuery from 'react-responsive';
+import NavBar from './components/navbar';
 import logo from './logo.svg';
 import './css/App.css';
 
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <ProkiteboardingMenu />
+
         <Header />
         <main>
           <AboutLessons />

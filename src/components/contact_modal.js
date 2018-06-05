@@ -5,7 +5,7 @@ import KiteboardingContactUs from '../images/kiteboardingcontactus.jpg';
 const ContactModal = () => (
   <Modal
     id="contact-modal"
-    trigger={<div>Contact us now</div>}
+    trigger={<div>Contact Information</div>}
     className="contact-modal"
   >
     <Modal.Header className="contact-modal--header">

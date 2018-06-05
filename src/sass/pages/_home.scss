@@ -49,3 +49,24 @@
     transform: skewY(7deg);
   }
 }
+
+.section-book {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    url(../images/sunsetobx.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem !important;
+  margin-bottom: -7rem !important;
+  padding-top: 10rem !important;
+  padding-bottom: 15rem !important;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+  // background-position: top;
+  // position: relative;
+}

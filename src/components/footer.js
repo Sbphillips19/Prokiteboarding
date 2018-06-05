@@ -40,7 +40,11 @@ class Footer extends React.Component {
         <div className="row">
           <p className="footer__copyright">
             Built by{' '}
-            <a href="#" className="footer__link">
+            <a
+              href="https://www.linkedin.com/in/stephen-b-phillips/"
+              target="_blank"
+              className="footer__link"
+            >
               Stephen Phillips
             </a>
           </p>

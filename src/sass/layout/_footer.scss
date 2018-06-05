@@ -3,6 +3,7 @@
   padding: 8rem 0;
   font-size: 2rem;
   color: $color-grey-light-1;
+  position: sticky;
 
   @include respond(tab-port) {
     padding: 6rem 0;

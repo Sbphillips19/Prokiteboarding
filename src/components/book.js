@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Segment, Radio } from 'semantic-ui-react';
+import { Form, Segment, Radio, Popup, Button, Image } from 'semantic-ui-react';
+import SunsetObx from '../images/sunsetobx.jpg';
 
 const gender_options = [
   { key: 'm', text: 'Male', value: 'male' },
@@ -17,71 +18,131 @@ const harness_size = [
 
 class Book extends Component {
   state = {
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: '',
     lessons: false,
-    repairs: false
+    repairs: false,
+    gender: '',
+    harnessSize: '',
+    additionalInfo: ''
   };
-  // toggleLessons = () => this.setState({ checked: !this.state.lessons });
-  // toggleRepairs = () => this.setState({ checked: !this.state.repairs });
 
-  handleChange = (e, { value }) => this.setState({ value });
+  handleChange = (e, { name, value }) => this.setState({ [name]: value });
+  // handleChange = (e, { value }) => this.setState({ value });
 
   render() {
-    const { value } = this.state;
+    const {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      lessons,
+      repairs,
+      gender,
+      harnessSize,
+      additionalInfo
+    } = this.state;
     return (
       <section className="section-book" id="book">
         <div className="u-center-text u-margin-bottom-big">
           <h2 className="heading-secondary">Contact Us Now</h2>
           <h3 className="heading-tertiary">What are you waiting for?</h3>
         </div>
-        <Segment inverted>
+
+        <Segment inverted className="contact-us-now-form">
           <Form inverted>
-            <Form.Group widths="equal">
-              <Form.Input fluid label="First name" placeholder="First name" />
-              <Form.Input fluid label="Last name" placeholder="Last name" />
+            <Form.Group widths="equal" className="Name">
+              <Form.Input
+                fluid
+                label="First Name"
+                placeholder="First Name"
+                name="firstName"
+                value={firstName}
+                onChange={this.handleChange}
+              />
+              <Form.Input
+                fluid
+                label="Last Name"
+                placeholder="Last Name"
+                name="lastName"
+                value={lastName}
+                onChange={this.handleChange}
+              />
             </Form.Group>
 
-            <Form.Group>
+            <Form.Input
+              fluid
+              className="PhoneNumber2"
+              placeholder="(xxx)-xxx-xxxx"
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={this.handleChange}
+            />
+
+            <Form.Input
+              fluid
+              className="EmailAddress"
+              placeholder="Email"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+
+            <Form.Group className="RadioButtons">
               <Form.Field>
                 <Radio
                   label="Kiteboarding Lessons"
-                  name="radioGroup"
-                  value="lessons"
-                  checked={this.state.value === 'lessons'}
+                  name="lessons"
+                  value={lessons}
+                  checked={this.state.lessons === 'lessons'}
                   onChange={this.handleChange}
                 />
               </Form.Field>
               <Form.Field>
                 <Radio
                   label="Kiteboarding Repairs"
-                  name="radioGroup"
-                  value="repairs"
-                  checked={this.state.value === 'repairs'}
+                  name="repairs"
+                  value={repairs}
+                  checked={this.state.repairs === 'repairs'}
                   onChange={this.handleChange}
                 />
               </Form.Field>
             </Form.Group>
 
             {this.state.value === 'lessons' && (
-              <Form.Group>
+              <Form.Group widths="equal" className="Dropdowns">
                 <Form.Select
                   fluid
                   label="Gender"
+                  name="gender"
+                  value={gender}
                   options={gender_options}
                   placeholder="Gender"
                 />
                 <Form.Select
                   fluid
                   label="Harness Size"
+                  name="harnessSize"
+                  value={harnessSize}
                   options={harness_size}
                   placeholder="Harness Size"
+                />
+                <Popup
+                  trigger={<Button icon="info" />}
+                  size="small"
+                  content="Waist sizing to have harness ready for you"
                 />
               </Form.Group>
             )}
             <Form.TextArea
-              label="About"
-              placeholder="Tell us more about you..."
+              className="AdditionalInfo"
+              label="Message"
+              name="additionalInfo"
+              value={additionalInfo}
+              placeholder="Additional information"
             />
-            <Form.Checkbox label="I agree to the Terms and Conditions" />
             <Form.Button>Submit</Form.Button>
           </Form>
         </Segment>
