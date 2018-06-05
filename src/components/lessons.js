@@ -39,7 +39,7 @@ const Lessons = () => (
           </Card.Content>
           <Card.Content className="lessons-grid__column__content--extra" extra>
             <div className="btn book-now-button">
-              <Button fluid color="green">
+              <Button fluid color="green" href="#book">
                 Book Now
               </Button>
             </div>
@@ -75,7 +75,7 @@ const Lessons = () => (
           </Card.Content>
           <Card.Content className="lessons-grid__column__content--extra" extra>
             <div className="btn book-now-button">
-              <Button fluid color="green">
+              <Button fluid color="green" href="#book">
                 Book Now
               </Button>
             </div>
@@ -112,7 +112,7 @@ const Lessons = () => (
           </Card.Content>
           <Card.Content className="lessons-grid__column__content--extra" extra>
             <div className="btn book-now-button">
-              <Button fluid color="green">
+              <Button fluid color="green" href="#book">
                 Book Now
               </Button>
             </div>
