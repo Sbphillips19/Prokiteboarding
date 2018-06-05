@@ -36,7 +36,7 @@ const AboutLessons = () => (
           href="#lessons"
         />
       </Grid.Column>
-      <Grid.Column>
+      <Grid.Column className="grid-about__image">
         <Image size="large" rounded centered src={LearnToRide} />
       </Grid.Column>
     </Grid>

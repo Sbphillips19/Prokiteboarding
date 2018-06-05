@@ -112,6 +112,10 @@ body {
       background-color: #f5f2f2;
       border-radius: 5px;
       padding-top: 2rem !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .grid-about__image {
+      padding-left: 0 !important;
+      padding-right: 0 !important; } }
 
 .about-list {
   margin-left: 5rem !important;
@@ -149,6 +153,10 @@ body {
 .btn--green {
   background-color: #55c57a;
   color: #fff; }
+
+.book-now-button {
+  padding: 0rem;
+  display: block; }
 
 #contact-modal .contact-modal--header {
   font-size: 5rem; }
