@@ -7,6 +7,7 @@ const ContactModal = () => (
     id="contact-modal"
     trigger={<div>Contact Information</div>}
     className="contact-modal"
+    closeIcon
   >
     <Modal.Header className="contact-modal--header">
       Prokiteboarding Contact Information
