@@ -28,6 +28,15 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tab-land) {
+    padding: 4rem 0;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+  }
 }
 
 .section-repairs {
@@ -43,10 +52,25 @@
   position: relative;
 
   margin-bottom: 10rem;
+
   transform: skewY(-7deg);
 
   & > * {
     transform: skewY(7deg);
+  }
+
+  @include respond(tab-land) {
+    padding: 4rem 0;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+  }
+
+  @include respond(tab-phone) {
+    margin-bottom: 4rem;
+    margin-top: 5rem;
   }
 }
 
@@ -67,6 +91,13 @@
   & > * {
     transform: skewY(7deg);
   }
-  // background-position: top;
-  // position: relative;
+
+  @include respond(tab-land) {
+    padding-top: 4rem !important;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+  }
 }

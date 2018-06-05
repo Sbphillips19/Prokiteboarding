@@ -1,12 +1,26 @@
 .grid-about {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
+
+  &__column {
+    @include respond(tab-land) {
+      background-color: $color-grey-light-3;
+      border-radius: 5px;
+      padding-top: 2rem !important;
+    }
+  }
 }
 
 .about-list {
   margin-left: 5rem !important;
   margin-top: 3rem !important;
   margin-bottom: 2rem !important;
+
+  @include respond(phone) {
+    margin-left: 3rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
 
   &--item {
     margin-top: 2rem;

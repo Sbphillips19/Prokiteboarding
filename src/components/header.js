@@ -15,6 +15,13 @@ class Header extends React.Component {
             src={GuaranteedToRide}
           />
         </div>
+        <a
+          id="prokiteboarding-phone-number"
+          className="btn btn--white"
+          href="tel:1-716-254-7130"
+        >
+          Call Us Now!
+        </a>
       </header>
     );
   }

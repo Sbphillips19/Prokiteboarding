@@ -78,15 +78,15 @@ export default class ProkiteboardingMenu extends Component {
             <Menu attached="top">
               <Dropdown item icon="sidebar" simple>
                 <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <Menu.Item name="Lessons & Prices" href="#about-lessons" />
+                  <Dropdown.Item href="#about-lessons">
+                    Lessons & Prices
                   </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Menu.Item name="Kite Repairs" href="#about-repairs" />
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#about-repairs">
+                    Kite Repairs
                   </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Menu.Item name="Contact us" href="#book" />
-                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#book">Contact us</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
 

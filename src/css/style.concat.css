@@ -504,12 +504,24 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   font-size: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 4rem; } }
 
 .heading-tertiary {
   color: #21ba45;
   text-transform: uppercase;
   backface-visibility: hidden;
   font-size: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-tertiary {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 2rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -522,21 +534,39 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-big {
+      margin-bottom: 3rem !important; } }
 
 .u-margin-top-big {
   margin-top: 8rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-top-big {
+      margin-bottom: 5rem !important; } }
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-top-huge {
+      margin-bottom: 7rem !important; } }
 
 .grid-about {
   padding-left: 5rem !important;
   padding-right: 5rem !important; }
+  @media only screen and (max-width: 75em) {
+    .grid-about__column {
+      background-color: #f5f2f2;
+      border-radius: 5px; } }
 
 .about-list {
   margin-left: 5rem !important;
   margin-top: 3rem !important;
   margin-bottom: 2rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .about-list {
+      margin-left: 3rem !important;
+      margin-top: 2rem !important;
+      margin-bottom: 1rem !important; } }
   .about-list--item {
     margin-top: 2rem; }
   .about-list--item:first-child {
@@ -546,6 +576,20 @@ body {
   margin-left: 5rem !important;
   margin-top: 2rem !important;
   padding: 2rem !important; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 1rem;
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
 
 #contact-modal .contact-modal--header {
   font-size: 5rem; }
@@ -564,6 +608,12 @@ body {
 .repairs-item-group {
   margin-left: 10rem !important;
   margin-right: 10rem !important; }
+  @media only screen and (max-width: 75em) {
+    .repairs-item-group__item--image {
+      margin-left: 5rem !important;
+      margin-right: 5rem !important;
+      margin-left: 0;
+      margin-right: 0; } }
 
 .repair-image {
   height: 30rem; }
@@ -608,6 +658,14 @@ body {
     padding: 2rem;
     text-transform: uppercase; }
 
+#prokiteboarding-phone-number {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    #prokiteboarding-phone-number {
+      display: inline-block;
+      left: 50%;
+      transform: translate(-50%); } }
+
 .header-main {
   height: 85vh;
   background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4)), url(../images/obxdownwind.jpg);
@@ -620,11 +678,18 @@ body {
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
       height: 95vh; } }
+  @media only screen and (max-width: 75em) {
+    .header-main {
+      height: 70vh;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0% 100%);
+      margin-bottom: 6rem; } }
   @media only screen and (max-width: 37.5em) {
     .header-main {
-      height: 45vh;
+      height: 40vh;
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
-      clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%); } }
+      clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+      margin-bottom: 3.5rem; } }
   .header-main__logo {
     border-radius: 3px;
     padding: 6rem;
@@ -633,9 +698,14 @@ body {
     left: 50%;
     transform: skewX(-2deg) translate(-50%);
     width: 75%; }
+    @media only screen and (max-width: 75em) {
+      .header-main__logo {
+        width: 85%; } }
     @media only screen and (max-width: 37.5em) {
       .header-main__logo {
-        width: 95%; } }
+        width: 95%;
+        padding: 3rem;
+        border-radius: 2px; } }
 
 #nav {
   top: 0;
@@ -666,6 +736,12 @@ body {
   transform: skewY(-7deg); }
   .section-lessons > * {
     transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-lessons {
+      padding: 4rem 0;
+      transform: skewY(0); }
+      .section-lessons > * {
+        transform: skewY(0); } }
 
 .section-repairs {
   margin-top: 10rem;
@@ -678,6 +754,12 @@ body {
   transform: skewY(-7deg); }
   .section-repairs > * {
     transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-repairs {
+      padding: 4rem 0;
+      transform: skewY(0); }
+      .section-repairs > * {
+        transform: skewY(0); } }
 
 .section-book {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), url(../images/sunsetobx.jpg);
@@ -689,3 +771,9 @@ body {
   padding-bottom: 15rem !important; }
   .section-book > * {
     transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-book {
+      padding-top: 4rem !important;
+      transform: skewY(0); }
+      .section-book > * {
+        transform: skewY(0); } }
