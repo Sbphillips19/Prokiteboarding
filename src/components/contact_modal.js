@@ -36,7 +36,7 @@ const ContactModal = () => (
         <p className="contact-modal__content__description--paragraph">
           <a
             id="prokiteboarding-phone-number"
-            className="btn btn--white"
+            className="btn btn--green"
             href="tel:1-716-254-7130"
           >
             Call Us Now!

@@ -592,6 +592,10 @@ body {
   background-color: #fff;
   color: #777; }
 
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+
 #contact-modal .contact-modal--header {
   font-size: 5rem; }
 
