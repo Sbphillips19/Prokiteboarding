@@ -43,12 +43,17 @@
     "watch:sass": "node-sass src/sass/main.scss src/css/App.css -w",
     "devserver": "live-server",
     "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
-    "concat:css": "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
-    "compress:css": "node-sass src/css/style.prefix.css src/css/App.css --output-style compressed",
+    "concat:css":
+      "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
+    "prefix:css":
+      "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
+    "compress:css":
+      "node-sass src/css/style.prefix.css src/css/App.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-    "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "nodemon ./back-end/bin/www",
+    "client": "react-scripts start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":
+      "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   }
 }
