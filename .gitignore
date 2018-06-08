@@ -19,3 +19,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#keys
+/src/server/mailer/config/dev.js
+
+#random delete
+/src/EmailSend.js

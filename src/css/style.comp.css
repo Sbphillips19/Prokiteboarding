@@ -176,6 +176,9 @@ body {
       margin-left: 3rem !important;
       margin-right: 3rem !important; } }
 
+.lessons-grid__column__content--top {
+  flex-grow: 0 !important; }
+
 .repairs-item-group {
   margin-left: 10rem !important;
   margin-right: 10rem !important; }

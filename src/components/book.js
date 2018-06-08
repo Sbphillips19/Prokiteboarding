@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Segment, Radio, Popup, Button, Image } from 'semantic-ui-react';
 import SunsetObx from '../images/sunsetobx.jpg';
+import axios from 'axios';
 
 const gender_options = [
   { key: 'm', text: 'Male', value: 'male' },
@@ -26,11 +27,59 @@ class Book extends Component {
     repairs: false,
     gender: '',
     harnessSize: '',
-    additionalInfo: ''
+    additionalInfo: '',
+    radioGroup: false
   };
 
-  handleChange = (e, { name, value }) => this.setState({ [name]: value });
-  // handleChange = (e, { value }) => this.setState({ value });
+  handleSubmit = (e, { value }) => {
+    e.preventDefault();
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
+    const phoneNumber = this.state.phoneNumber;
+    const email = this.state.email;
+    const radioGroup = this.state.radioGroup;
+    const gender = this.state.gender;
+    const harnessSize = this.state.harnessSize;
+    const additionalInfo = this.state.additionalInfo;
+
+    axios({
+      method: 'POST',
+      url: 'http://localhost:3002/send',
+      data: {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        email: email,
+        radioGroup: radioGroup,
+        gender: gender,
+        harnessSize: harnessSize,
+        additionalInfo: additionalInfo
+      }
+    }).then(response => {
+      if (response.data.msg === 'success') {
+        alert('Message Sent.');
+        this.resetForm();
+      } else if (response.data.msg === 'fail') {
+        alert('Message failed to send.');
+      }
+    });
+  };
+
+  resetForm() {
+    document.getElementById('contact-form').reset();
+  }
+
+  handleChange = (e, { name, value }) => {
+    this.setState({ [name]: value });
+    // console.log('firstName: ' + this.state.firstName);
+    // console.log('lastName: ' + this.state.lastName);
+    // console.log('phoneNumber: ' + this.state.phoneNumber);
+    // console.log('email: ' + this.state.email);
+    // console.log('radioGroup: ' + this.state.radioGroup);
+    // console.log('gender: ' + this.state.gender);
+    // console.log('harnessSize: ' + this.state.harnessSize);
+    // console.log('additionalInfo: ' + this.state.additionalInfo);
+  };
 
   render() {
     const {
@@ -42,7 +91,8 @@ class Book extends Component {
       repairs,
       gender,
       harnessSize,
-      additionalInfo
+      additionalInfo,
+      radioGroup
     } = this.state;
     return (
       <section className="section-book" id="book">
@@ -52,7 +102,13 @@ class Book extends Component {
         </div>
 
         <Segment inverted className="contact-us-now-form">
-          <Form inverted>
+          <Form
+            inverted
+            method="POST"
+            action="/contact"
+            id="contact-form"
+            onSubmit={this.handleSubmit}
+          >
             <Form.Group widths="equal" className="Name">
               <Form.Input
                 fluid
@@ -74,6 +130,7 @@ class Book extends Component {
 
             <Form.Input
               fluid
+              label="Phone Number"
               className="PhoneNumber2"
               placeholder="(xxx)-xxx-xxxx"
               name="phoneNumber"
@@ -83,6 +140,7 @@ class Book extends Component {
 
             <Form.Input
               fluid
+              label="Email Address"
               className="EmailAddress"
               placeholder="Email"
               name="email"
@@ -94,24 +152,24 @@ class Book extends Component {
               <Form.Field>
                 <Radio
                   label="Kiteboarding Lessons"
-                  name="lessons"
-                  value={lessons}
-                  checked={this.state.lessons === 'lessons'}
+                  name="radioGroup"
+                  value="lessons"
+                  checked={this.state.radioGroup === 'lessons'}
                   onChange={this.handleChange}
                 />
               </Form.Field>
               <Form.Field>
                 <Radio
                   label="Kiteboarding Repairs"
-                  name="repairs"
-                  value={repairs}
-                  checked={this.state.repairs === 'repairs'}
+                  name="radioGroup"
+                  value="repairs"
+                  checked={this.state.radioGroup === 'repairs'}
                   onChange={this.handleChange}
                 />
               </Form.Field>
             </Form.Group>
 
-            {this.state.value === 'lessons' && (
+            {this.state.radioGroup === 'lessons' && (
               <Form.Group widths="equal" className="Dropdowns">
                 <Form.Select
                   fluid
@@ -120,6 +178,7 @@ class Book extends Component {
                   value={gender}
                   options={gender_options}
                   placeholder="Gender"
+                  onChange={this.handleChange}
                 />
                 <Form.Select
                   fluid
@@ -128,6 +187,7 @@ class Book extends Component {
                   value={harnessSize}
                   options={harness_size}
                   placeholder="Harness Size"
+                  onChange={this.handleChange}
                 />
                 <Popup
                   trigger={<Button icon="info" />}
@@ -142,8 +202,24 @@ class Book extends Component {
               name="additionalInfo"
               value={additionalInfo}
               placeholder="Additional information"
+              onChange={this.handleChange}
             />
-            <Form.Button>Submit</Form.Button>
+            <Form.Button type="submit" value="Submit">
+              Submit
+            </Form.Button>
+
+            <div>
+              {window.location.hash === '#success' && (
+                <div id="success">
+                  <p>Your message has been sent!</p>
+                </div>
+              )}
+              {window.location.hash === '#error' && (
+                <div id="error">
+                  <p>An error occured while submitting the form.</p>
+                </div>
+              )}
+            </div>
           </Form>
         </Segment>
       </section>

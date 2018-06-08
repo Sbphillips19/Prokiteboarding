@@ -10,15 +10,29 @@
     "postcss-cli": "^5.0.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.1",
+    "cookie-parse": "^0.4.0",
+    "express": "^4.16.3",
     "lodash": "^4.17.10",
+    "nodemailer": "^4.6.5",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
     "react-responsive": "^4.1.0",
     "react-responsive-navbar": "^1.0.11",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
     "semantic-ui-css": "2.2.12",
     "semantic-ui-react": "^0.80.0",
-    "server": "^1.0.18"
+    "server": "^1.0.18",
+    "xoauth2": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,6 +46,9 @@
     "concat:css": "concat -o src/css/style.concat.css src/css/icon-font.css src/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
     "compress:css": "node-sass src/css/style.prefix.css src/css/App.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }

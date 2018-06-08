@@ -1,0 +1,12 @@
+.lessons-grid {
+  &__column {
+    &__content {
+      &--top {
+        flex-grow: 0 !important;
+      }
+
+      &--bottom {
+      }
+    }
+  }
+}

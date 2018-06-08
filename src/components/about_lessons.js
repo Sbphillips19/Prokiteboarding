@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Grid, Segment, Image, List } from 'semantic-ui-react';
-import LearnToRide from '../images/learntoride.jpg';
+import JumpSunset from '../images/jumpsunset.jpg';
 
 const AboutLessons = () => (
   <section className="section-about-lessons" id="about-lessons">
@@ -37,7 +37,7 @@ const AboutLessons = () => (
         />
       </Grid.Column>
       <Grid.Column className="grid-about__image">
-        <Image size="large" rounded centered src={LearnToRide} />
+        <Image size="large" rounded centered src={JumpSunset} />
       </Grid.Column>
     </Grid>
   </section>
