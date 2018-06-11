@@ -1,0 +1,10 @@
+.contact-us-now-form {
+  margin-top: 5rem !important;
+  margin-left: 10rem !important;
+  margin-right: 10rem !important;
+
+  @include respond(phone) {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
+}

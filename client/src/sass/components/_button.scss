@@ -1,0 +1,35 @@
+.learn-more-button {
+  margin-left: 5rem !important;
+  margin-top: 2rem !important;
+  padding: 2rem !important;
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border-radius: 1rem;
+    position: relative;
+    font-size: $default-font-size;
+    cursor: pointer;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.book-now-button {
+  padding: 0rem;
+  display: block;
+}

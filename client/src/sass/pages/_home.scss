@@ -1,0 +1,108 @@
+.section-about {
+  padding: 5rem 0;
+  background-color: $color-white;
+  background-size: cover;
+}
+
+.section-book {
+  padding: 5rem 0;
+  background-color: $color-white;
+  background-size: cover;
+}
+
+.section-lessons {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-green, 0.4),
+    rgba($color-primary-blue, 0.4)
+  );
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  margin-bottom: 10rem;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-land) {
+    padding: 4rem 0;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.section-repairs {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+    to right,
+    rgba($color-primary-green, 0.4),
+    rgba($color-primary-blue, 0.4)
+  );
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  margin-bottom: 10rem;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-land) {
+    padding: 4rem 0;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+  }
+
+  @include respond(phone) {
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.section-book {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    url(../images/sunsetobx.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem !important;
+  margin-bottom: -7rem !important;
+  padding-top: 10rem !important;
+  padding-bottom: 15rem !important;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-land) {
+    padding-top: 4rem !important;
+    transform: skewY(0);
+
+    & > * {
+      transform: skewY(0);
+    }
+  }
+}

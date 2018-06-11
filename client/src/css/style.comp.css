@@ -1,0 +1,363 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /* font-size: 10px; */
+  /* take 10/16- so that when user changes % of screen the font size changes */
+  /* default is 16px but we want to start at 10px */
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-secondary {
+  color: #66ccff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 4rem; } }
+
+.heading-tertiary {
+  color: #21ba45;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-tertiary {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 2rem; } }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-big {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-top-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-top-huge {
+      margin-bottom: 7rem !important; } }
+
+.grid-about {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important; }
+  @media only screen and (max-width: 75em) {
+    .grid-about__column {
+      background-color: #f5f2f2;
+      border-radius: 5px;
+      padding-top: 2rem !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .grid-about__image {
+      padding-left: 0 !important;
+      padding-right: 0 !important; } }
+
+.about-list {
+  margin-left: 5rem !important;
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .about-list {
+      margin-left: 3rem !important;
+      margin-top: 2rem !important;
+      margin-bottom: 1rem !important; } }
+  .about-list--item {
+    margin-top: 2rem; }
+  .about-list--item:first-child {
+    margin-top: 1.5rem; }
+
+.learn-more-button {
+  margin-left: 5rem !important;
+  margin-top: 2rem !important;
+  padding: 2rem !important; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 1rem;
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+
+.book-now-button {
+  padding: 0rem;
+  display: block; }
+
+#contact-modal .contact-modal--header {
+  font-size: 5rem; }
+
+#contact-modal .contact-modal__content__description--header {
+  font-size: 3rem; }
+
+#contact-modal .contact-modal__content__description--paragraph {
+  font-size: 2rem; }
+
+.contact-us-now-form {
+  margin-top: 5rem !important;
+  margin-left: 10rem !important;
+  margin-right: 10rem !important; }
+  @media only screen and (max-width: 37.5em) {
+    .contact-us-now-form {
+      margin-left: 3rem !important;
+      margin-right: 3rem !important; } }
+
+.lessons-grid__column__content--top {
+  flex-grow: 0 !important; }
+
+.repairs-item-group {
+  margin-left: 10rem !important;
+  margin-right: 10rem !important; }
+  @media only screen and (max-width: 75em) {
+    .repairs-item-group {
+      margin-left: 5rem !important;
+      margin-right: 5rem !important; } }
+  @media only screen and (max-width: 75em) {
+    .repairs-item-group__item--image {
+      margin-left: 0;
+      margin-right: 0; } }
+
+.repair-image {
+  height: 30rem; }
+
+.footer {
+  background-color: #333;
+  padding: 8rem 0;
+  font-size: 2rem;
+  color: #f7f7f7;
+  position: sticky; }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      padding: 6rem 0; } }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%; } }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+    .footer__item:first-child {
+      margin-left: 1rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.3); }
+  .footer__copyright {
+    border-top: 1px solid #777;
+    text-align: right;
+    font-size: 1rem;
+    padding: 2rem;
+    text-transform: uppercase; }
+
+#prokiteboarding-phone-number {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    #prokiteboarding-phone-number {
+      display: inline-block;
+      left: 50%;
+      transform: translate(-50%); } }
+
+.header-main {
+  height: 85vh;
+  background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4)), url(../images/obxdownwind.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @supports (clib-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header-main {
+      /* top left, top right, bottom right, bottom left */
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
+      height: 95vh; } }
+  @media only screen and (max-width: 75em) {
+    .header-main {
+      height: 70vh;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0% 100%);
+      margin-bottom: 6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header-main {
+      height: 40vh;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 40vh, 0% 100%);
+      margin-bottom: 3.5rem; } }
+  .header-main__logo {
+    border-radius: 3px;
+    padding: 6rem;
+    font-size: 1.6rem;
+    position: relative;
+    left: 50%;
+    transform: skewX(-2deg) translate(-50%);
+    width: 75%; }
+    @media only screen and (max-width: 75em) {
+      .header-main__logo {
+        width: 85%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header-main__logo {
+        width: 95%;
+        padding: 3rem;
+        border-radius: 2px; } }
+
+#nav {
+  top: 0;
+  left: 0;
+  margin-bottom: 0 !important; }
+
+.ui.menu .item:before {
+  height: 0 !important; }
+
+.section-about {
+  padding: 5rem 0;
+  background-color: #fff;
+  background-size: cover; }
+
+.section-book {
+  padding: 5rem 0;
+  background-color: #fff;
+  background-size: cover; }
+
+.section-lessons {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-bottom: 10rem;
+  transform: skewY(-7deg); }
+  .section-lessons > * {
+    transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-lessons {
+      padding: 4rem 0;
+      transform: skewY(0); }
+      .section-lessons > * {
+        transform: skewY(0); } }
+  @media only screen and (max-width: 75em) and (max-width: 37.5em) {
+    .section-lessons {
+      margin-bottom: 5rem; } }
+
+.section-repairs {
+  margin-top: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(to right, rgba(102, 255, 153, 0.4), rgba(102, 204, 255, 0.4));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-bottom: 10rem;
+  transform: skewY(-7deg); }
+  .section-repairs > * {
+    transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-repairs {
+      padding: 4rem 0;
+      transform: skewY(0); }
+      .section-repairs > * {
+        transform: skewY(0); } }
+  @media only screen and (max-width: 37.5em) {
+    .section-repairs {
+      margin-bottom: 4rem;
+      margin-top: 5rem;
+      padding-bottom: 10rem; } }
+
+.section-book {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), url(../images/sunsetobx.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem !important;
+  margin-bottom: -7rem !important;
+  padding-top: 10rem !important;
+  padding-bottom: 15rem !important; }
+  .section-book > * {
+    transform: skewY(7deg); }
+  @media only screen and (max-width: 75em) {
+    .section-book {
+      padding-top: 4rem !important;
+      transform: skewY(0); }
+      .section-book > * {
+        transform: skewY(0); } }

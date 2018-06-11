@@ -1,0 +1,22 @@
+.repairs-item-group {
+  margin-left: 10rem !important;
+  margin-right: 10rem !important;
+
+  @include respond(tab-land) {
+    margin-left: 5rem !important;
+    margin-right: 5rem !important;
+  }
+
+  &__item {
+    &--image {
+      @include respond(tab-land) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.repair-image {
+  height: 30rem;
+}

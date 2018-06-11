@@ -1,0 +1,18 @@
+#contact-modal .contact-modal {
+  &--header {
+    font-size: 5rem;
+  }
+  &__content {
+    &--image {
+    }
+
+    &__description {
+      &--header {
+        font-size: 3rem;
+      }
+      &--paragraph {
+        font-size: 2rem;
+      }
+    }
+  }
+}
